@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="out.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNwzK1SnxDITyJZaWrwDmwXLhdudkwqnI",
+            authDomain: "portfolio-shirsadip.firebaseapp.com",
+            projectId: "portfolio-shirsadip",
+            storageBucket: "portfolio-shirsadip.appspot.com",
+            messagingSenderId: "700967464042",
+            appId: "1:700967464042:web:688b8cb4f3537c9c74ae13",
+            measurementId: "G-4HKW0FS014"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+   
+
+    <nav class="lg:hidden bg-transparent my-8 align-middle" id="mobile-navbar">
+        <div class=" flex flex-wrap items-center justify-between mx-auto">
+            <div class="container mx-auto flex justify-between items-start px-4">
+                <a href="#" class="flex items-center px-4">
+                    <span class=" mx-auto text-2xl md:text-4xl font-medium whitespace-nowrap text-white">Shirsadip Das</span>
+                </a>
+                <button class="mobile-menu-button">
+                  <img src="/final/menu-icon.png" class="w-10 h-10 md:w-12 md:h-12">
+                </button>
+            </div>
+
+            <div class="hidden mobile-menu w-full px-10 my-4" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col xl:space-x-12 font-medium p-4  mt-4 border border-gray-100 rounded-lg ">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-white bg-orange-700 rounded"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#skills"
+                            class="block py-2 pl-3 pr-4 rounded text-white  hover:bg-gray-700 hover:text-white ">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects"
+                            class="block py-2 pl-3 pr-4 rounded text-white  hover:bg-gray-700 hover:text-white ">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#education"
+                            class="block py-2 pl-3 pr-4 rounded text-white  hover:bg-gray-700 hover:text-white ">Education</a>
+                    </li>
+                    <li class="">
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 rounded text-white  hover:bg-gray-700 hover:text-white ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+              
+              <script>
+                const btn= document.querySelector("button.mobile-menu-button");
+                const menu= document.querySelector(".mobile-menu")
+                btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+              });
+              </script>
+        </div>
+    </nav>
+
+    <nav class="hidden lg:block bg-transparent my-4 px-10 align-middle" id="laptop-navbar">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-center">
+            <a href="#" class="flex items-center">
+                <span class="self-center text-3xl font-medium whitespace-nowrap text-white">Shirsadip Das</span>
+            </a>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col xl:space-x-12 font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-white bg-orange-700 rounded md:bg-transparent md:text-orange-500 md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#skills"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded  md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded  md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#education"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded   md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Education</a>
+                    </li>
+                    <li class="mx-10">
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded   md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="main">
+        <div class="container py-24 lg:py-44 mx-auto">
+            <div class="px-8 mx-auto text-white lg:text-center font-light text-left  ">
+                <span class="leading-normal md:w-fit text-3xl xl:text-5xl font-bold">
+                    <span class="text-orange-600 text-4xl xl:text-5xl lg:text-center">Embracing Data,</span> Unlocking Revelations
+                </span>
+                <div class="my-2 lg:my-4 w-fit lg:w-2/3 mx-auto lg:text-center">
+                <p>As a Computer Engineering undergraduate, I continually evolve,channeling my passion for <span class="text-orange-400">Data science</span> and <span class="text-orange-400">Machine learning.</span>
+                A collaborative spirit with a keen eye for detail, my standout strength lies in rapid assimilation, making me an adept and quick learner in any technological landscape.</p></div>
+        
+            </div>
+            <div class="mx-auto my-4 text-center w-full"><a href="#about"><button class="border-2 my-8 font-normal lg:text-lg text-orange-600 rounded-full px-16 py-2 hover:bg-white">Know more</button></a></div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-white">
+        <div class="container mx-auto py-24">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h2 class="  tracking-widest  title-font mb-1">ABOUT ME</h2>
+                <h1 class="sm:text-4xl text-3xl font-semibold title-font mb-4 text-orange-500">Who Am I?</h1>
+                <p class="lg:w-2/3 mx-auto px-8 leading-relaxed text-base xl:text-lg">I'm a second-year college student pursuing a major in Computer
+                    Science with a specialization in Artificial Intelligence. Originating from Kolkata, India, my aspiration is to carve my path into the realm of Data Science, aiming to become a proficient and impactful <span class="text-orange-600">Data
+                        Scientist</span>.</p>
+            </div>
+            <div class="w-fit mx-auto flex flex-col space-y-10 lg:flex-row lg:space-y-0 lg:space-x-10">
+                <img src="/final/shirsa_iem.jpg" class="sepia w-60 h-60 rounded-full shadow-md  shadow-gray-500">
+                
+                <img src="/final/shirsa_wingardium.jpg" class="sepia w-60 h-60 rounded-full shadow-md  shadow-gray-500">
+                <img src="/final/shirsa1.jpg" class="sepia w-60 h-60 rounded-full shadow-md  shadow-gray-500">
+                <img src="/final/Shirsadip_iem.jpg" class="sepia w-60 h-60 rounded-full shadow-md  shadow-gray-500">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container py-24 lg:py-44 mx-auto">
+            <div class="px-8 mx-auto text-white lg:text-center font-light text-left ">
+                <h1 class="text-4xl font-bold ">What <span class="text-orange-500">Skills</span> do I posess?</h1>
+                <p class="lg:w-2/3 mx-auto my-2 lg:my-4 w-full xl:text-lg lg:text-center">A dynamic blend of coding, problem-solving, and data wizardry. I believe in hands-on learning approach, which is why I build myself everyday, and learn from everything.</p>
+            </div>
+            <div class="cards flex flex-col mx-auto space-y-10 my-20 lg:flex-row lg:space-y-0 lg:space-x-10 lg:px-24">
+                <div class="w-fit lg:w-1/2 mx-auto border-2 border-orange-600 md:border-none  rounded-3xl  px-10 py-8">
+                    <img src="/final/data.svg" class="w-52 h-52">
+                    <h2 class="text-white text-3xl lg:text-xl text-center font-light border-t-2 my-8 pt-8">Data Science</h2>
+                </div>
+                <div class="w-fit lg:w-1/2 mx-auto border-2 border-orange-600 md:border-none  rounded-3xl  px-10 py-8">
+                    <img src="/final/ml.svg" class="w-52 h-52">
+                    <h2 class="text-white text-3xl lg:text-xl text-center font-light border-t-2 my-8 pt-8">Machine Learning</h2>
+                </div>
+                <div class="w-fit lg:w-1/2 mx-auto border-2 border-orange-600 md:border-none rounded-3xl  px-10 py-8">
+                    <img src="/final/prog.svg" class="w-52 h-52">
+                    <h2 class="text-white text-3xl lg:text-xl text-center font-light border-t-2 my-8 pt-8">Python, Java, C</h2>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-white">
+        <div class="container py-24 lg:py-44 mx-auto">
+            <div class="px-8 mx-auto lg:text-center font-light text-left ">
+                <h1 class="text-4xl font-semibold ">With a variety of <span class="text-orange-500">Projects</span> built.</h1>
+                <p class="lg:w-2/3 mx-auto my-2 lg:my-4 w-full xl:text-lg lg:text-center">Fueled by passion, expertise, and boundless curiosity, here are my projects pertaining to the fields of data, ML and software.</p>
+            </div>
+
+            <div class="projects flex flex-col mx-auto px-10 space-y-10 my-20 lg:flex-row lg:space-y-0 lg:space-x-10 lg:px-24 overflow-hidden">
+                <div class="max-w-fit px-10 h-auto my-auto mx-10 sm:mx-0 py-10 shadow-lg rounded-lg">
+                    <img src="/final/Heartdisease.png" class=" rounded-xl shadow-lg lg:w-auto h-auto">
+                    <h1 class="text-2xl text-orange-600 font-semibold lg:text-lg  my-4">Heart Disease Prediction</h1>
+                    <p class="text-lg my-auto h-auto lg:text-base">A Machine learning project on predicting the heart disease in India, using a basic dataset</p>
+                    <div class="flex flex-grow space-x-5 my-4">
+                        
+                        <a href="https://github.com/Shirsadip0907/Heart_Disease_Prediction" target="_blank"><img src="/final/github-logo.svg" class="w-10 h-10"></a>
+                    </div>
+                </div>
+                <div class="max-w-fit px-10 h-auto my-auto mx-10 sm:mx-0 py-10 shadow-lg rounded-lg">
+                    <img src="/final/DataScience.png" class=" rounded-xl shadow-lg">
+                    <h1 class="text-2xl text-orange-600 font-semibold lg:text-lg my-4">Product Purchase Prediction</h1>
+                    <p class="text-lg lg:text-base">A decision tree classifier is built to predict whether a customer will purchase a product or service based on their demographic and behavioral data.Bank Marketing dataset is used from the UCI Machine Learning Repository.</p>
+                    <div class="flex flex-grow space-x-5 my-4">
+                        
+                        <a href="https://github.com/Shirsadip0907/PRODIGY_DS_03" target="_blank"><img src="/final/github-logo.svg" class="w-10 h-10"></a>
+                    </div>
+                </div>
+                <div class="max-w-fit px-10 h-auto my-auto mx-10 sm:mx-0 py-10 shadow-lg rounded-lg">
+                    <img src="/final/python.png" class=" rounded-xl shadow-lg">
+                    <h1 class="text-2xl text-orange-600 font-semibold h-auto my-4 lg:text-lg">Student Examination Portal</h1>
+                    <p class="text-lg my-auto lg:text-base">A python-based portal for managing examination procedures, results, student records, and data. Heavy use of matplotlib, pandas, numpy and other libraries. Clarity in concepts of file management in Python.</p>
+                    <div class="flex flex-grow space-x-5 my-4 ">
+                        
+                        <a href="https://github.com/Shirsadip0907/python_project" target="_blank"><img src="/final/github-logo.svg"class="w-10 h-10"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects flex flex-col mx-auto px-10 space-y-10 my-20 lg:flex-row lg:space-y-0 lg:space-x-10 lg:px-24">
+                <div class="max-w-fit  px-10 mx-10 sm:mx-0 py-10 shadow-lg rounded-lg">
+                    <img src="/final/C.png" class=" rounded-xl shadow-lg">
+                    <h1 class="text-2xl text-orange-600 font-semibold lg:text-lg my-4">Bank Management System</h1>
+                    <p class="text-lg lg:text-base">A bank management system built using C language where customers can create an account,deposit and withdraw money,and view their balance.</p>
+                    <div class="flex flex-grow space-x-5 my-4">
+                        
+                        <a href="https://github.com/Shirsadip0907/C_project" target="_blank"><img src="/final/github-logo.svg" class="w-10 h-10"></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container py-24 lg:py-44 mx-auto">
+            <div class="px-8 mx-auto text-white lg:text-center font-light text-left ">
+                <h1 class="text-4xl"><span class="font-semibold text-orange-400">Educating</span> myself everyday</h1>
+                <p class="lg:w-2/3 mx-auto my-2 lg:my-4 w-full xl:text-lg lg:text-center">I thrive to
+                    learn everyday,constantly growing and improving by embracing mistakes as valuable lessons.</p>
+            </div>
+    
+            <div class="container text-white px-5 md:px-10 lg:px-20 py-24 mx-auto">
+                <div class="-my-8 divide-y-2 divide-gray-100">
+                    <div class="py-8 flex flex-wrap md:flex-nowrap">
+                        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                            <span class="font-semibold title-font text-orange-500">BACHELOR OF TECHNOLOGY</span>
+                            <span class="mt-1  text-sm">2022 - 2026</span>
+                        </div>
+                        <div class="md:flex-grow">
+                            <h2 class="text-2xl font-medium text-orange-400 title-font mb-2">Institute of Engineering and
+                                Management, Kolkata</h2>
+                            <p class="leading-relaxed">With a major in Computing, I'm enthusiastic about exploring new trends and 
+                                staying updated on the latest advancements in the field. My relentless pursuit of knowledge and dedication to
+                                 excellence position me to make a significant impact in the realm of computer science.</p>
+                            <span class="my-8  text-base">GRADE: 9.54(1st Year)</span>
+                        </div>
+    
+                    </div>
+                    <div class="py-8 flex flex-wrap md:flex-nowrap my-8">
+                        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                            <span class="font-semibold title-font text-orange-500">INDIAN SCHOOL CERTIFICATE</span>
+                            <span class="mt-1  text-sm">2010 - 2022</span>
+                        </div>
+                        <div class="md:flex-grow">
+                            <h2 class="text-2xl font-medium text-orange-400 title-font mb-2">Don Bosco School, Bandel</h2>
+                            <p class="leading-relaxed">Being from the science stream, I have been a bright student in
+                                school. Was also a member of the Science club, and oraganiser of the school fest Bosco Xprezns, along with the
+                                core committee members.</p>
+                            <span class="mt-4  text-base">GRADE: 91.60% (X) --- 93.75% (XII)</span>
+    
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+    </section>
+
+
+
+
+    <script id="smooth-transition">
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+      
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+    </script>
+</body>
+</html>
